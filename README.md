@@ -34,3 +34,17 @@ Loss functions and optimizations. Machines learn by means of a loss function. It
          Multi-Class Cross-Entropy Loss
          Sparse Multiclass Cross-Entropy Loss
           Kullback Leibler Divergence Loss
+    
+# sample
+A sample is a single row of data.
+It contains inputs that are fed into the algorithm and an output that is used to compare to the prediction and calculate an error.
+# Batch->10
+The batch size is a hyperparameter that defines the number of samples to work through before updating the internal model parameters.
+# Epoch ->100
+The number of epochs is a hyperparameter that defines the number times that the learning algorithm will work through the entire training dataset.
+
+One epoch means that each sample in the training dataset has had an opportunity to update the internal model parameters. An epoch is comprised of one or more batches. For example, as above, an epoch that has one batch is called the batch gradient descent learning algorithm.
+
+You can think of a for-loop over the number of epochs where each loop proceeds over the training dataset. Within this for-loop is another nested for-loop that iterates over each batch of samples, where one batch has the specified “batch size” number of samples.
+
+The number of epochs is traditionally large, often hundreds or thousands, allowing the learning algorithm to run until the error from the model has been sufficiently minimized. You may see examples of the number of epochs in the literature and in tutorials set to 10, 100, 500, 1000, and larger.
